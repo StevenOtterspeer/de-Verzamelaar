@@ -37,7 +37,6 @@
         echo '<div class="img-block">';
         echo '<img src="' . $foto . '" alt="" title="' . $naam . '" class="img-responsive" />';
         echo '<p><strong>' . $naam . '</strong></p>';
-        echo '<p><strong>' . $prijs . '</strong></p>';
         echo '</div>';
         echo '</a>';
 
