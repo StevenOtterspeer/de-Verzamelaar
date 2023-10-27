@@ -12,7 +12,8 @@ ul {
   }  
     
   li {  
-    float: right;  
+    float: right;
+    cursor: crosshair;  
   }  
     
   li a {  
