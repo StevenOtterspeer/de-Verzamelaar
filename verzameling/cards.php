@@ -23,20 +23,41 @@
 
       <?php
     $connection = new SQLite3('db.db');
+
     if($connection){
         echo "Connected\n";
     }
-    $results = $connection->query('SELECT * FROM verzameling');
-    while($row=$results->fetchArray(SQLITE3_ASSOC)){
-        echo $row['foto'] . '<br>';
-        echo $row['naam'] . '<br>';
-        echo $row['beschrijving'] . '<br>';
-        echo $row['prijs'] . '<br>';
 
+    $id = $_GET["myid"];
+
+    $results = $connection->query('SELECT * FROM verzameling');
+
+    $image_query = mysqli_query($result,"select img_id,img_name,img_path from image_table where $id = img_id");
+	  while($rows = mysqli_fetch_array($image_query))
+	  {
+		$naam = $rows['naam'];
+		$foto = $rows['foto'];
+    $info = $rows['beschrijving'];
+    $prijs = $rows['prijs'];
     }
 ?>
 
-      <div id="carDisplayContainer" class="projects-container"></div>
+<div class="container main">
+	<div class="img-box">
+	
+	  <div class="img-block">
+
+	  <img src="<?php echo $foto; ?>" alt="" title="<?php echo $naam; ?>"/>
+
+	  </div>
+  </div>
+  <div class="info">
+    <?php echo $info; ?>
+  </div>
+  <div class="prijs">
+    <?php echo $prijs; ?>
+  </div>
+</div>
 
 </body>
 </html>

@@ -24,21 +24,34 @@
       <h2>Hotwheel Collection</h2>
 
       <?php
-    $connection = new SQLite3('my_db.db');
+    $connection = new SQLite3('db.db');
     if($connection){
         echo "Connected\n";
     }
     $results = $connection->query('SELECT * FROM verzameling');
     while($row=$results->fetchArray(SQLITE3_ASSOC)){
         echo "<div onclick=\"window.open('{$row['url']}' )\">";
-        echo $row['foto'] . '<br>'; 
-        echo $row['naam'] . '<br>';
-        echo $row['prijs'] . '<br>';
+        $foto_id = $rows['id'];
+        $foto = $rows['foto']; 
+        $naam = $rows['naam'];
+        $prijs = $rows['prijs'];
 
     }
 ?>
+      <div class="img-block">
+      <a href="cards.php?myid=<?php echo $foto_id; ?>" target="new window">
+	<img src="<?php echo $foto; ?>" alt="" title="<?php echo $naam; ?>" class="img-responsive" />
+	</a>
+				
+				
+				<p><strong><?php echo $naam; ?></strong></p>
+        <p><strong><?php echo $prijs; ?></strong></p>
+				</div>
 
-      <div id="carDisplayContainer" class="projects-container"></div>
+        
+      
+
+<div id="carDisplayContainer" class="projects-container"></div>
 
 </body>
 </html>
