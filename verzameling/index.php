@@ -12,9 +12,9 @@
     <nav>   
         <div class="navbar">
           <ul>
-            <a href="../images/hotwheelsLogo.png" class="logo">Logo</a>
+            <a href="../images/HotWheelsLogo.png" class="logo">Logo</a>
             <li><a href="../about/index.html">About</a></li>
-            <li><a href="../contact/index.html">Contact</a></li>
+            <li><a href="../contact/index.php">Contact</a></li>
             <li><a class="active" href="../verzamelling/index.php">Verzameling</a></li>
             <li><a href="../home/index.html">Home</a></li>
           </ul>
@@ -30,7 +30,6 @@
     }
     $results = $connection->query('SELECT * FROM verzameling');
     while($row=$results->fetchArray(SQLITE3_ASSOC)){
-        echo "<div onclick=\"window.open('{$row['url']}' )\">";
         $foto_id = $rows['id'];
         $foto = $rows['foto']; 
         $naam = $rows['naam'];
