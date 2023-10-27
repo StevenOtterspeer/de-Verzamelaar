@@ -38,6 +38,14 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+.information {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 .bestell {
     background-color: #e8991a;
     color: #fff;
