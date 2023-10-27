@@ -24,10 +24,6 @@
       <?php
     $connection = new SQLite3('../db/db.db');
 
-    if($connection){
-        echo "Connected\n";
-    }
-
     $id = $_GET["myid"];
 
     $results = $connection->query("SELECT * FROM verzameling WHERE id = $id");
