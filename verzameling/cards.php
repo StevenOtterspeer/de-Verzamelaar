@@ -54,9 +54,8 @@
   <div class="prijs">
     <h2>Prijs:</h2>
   <p>$<?php echo $prijs; ?></p>
-  </div>
 
-    <form action="./bestel.php" method="post" class='information'>
+    <form action="./bestel.php" method="post">
       <input type="hidden" id="item" name="item" value=""/>
       <input type="text" name="naam" id="naam" placeholder="Uw naam..."> <br>
       <input type="text" name="addres" id="addres" placeholder="Uw addres..."> <br>
@@ -69,6 +68,8 @@
     document.querySelector("form").submit();
   }
 </script>
+
+</div>
 
 </div>
 
