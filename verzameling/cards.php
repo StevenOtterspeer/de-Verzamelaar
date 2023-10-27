@@ -12,7 +12,7 @@
     <nav>   
         <div class="navbar">
           <ul>
-            <a href="../images/hotwheelsLogo.png" class="logo">Logo</a>
+          <a src="../images/HotWheelsLogo.png" href="../home/index.html" class="logo">Logo</a>
             <li><a href="../about/index.html">About</a></li>
             <li><a href="../contact/index.html">Contact</a></li>
             <li><a class="active" href="../verzamelling/index.php">Verzameling</a></li>

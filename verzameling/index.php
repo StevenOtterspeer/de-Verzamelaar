@@ -12,7 +12,7 @@
     <nav>   
         <div class="navbar">
           <ul>
-            <a href="../images/HotWheelsLogo.png" class="logo">Logo</a>
+            <a src="../images/HotWheelsLogo.png" href="../home/index.html" class="logo">Logo</a>
             <li><a href="../about/index.html">About</a></li>
             <li><a href="../contact/index.php">Contact</a></li>
             <li><a class="active" href="../verzamelling/index.php">Verzameling</a></li>
@@ -34,6 +34,14 @@
         $foto = $rows['foto']; 
         $naam = $rows['naam'];
         $prijs = $rows['prijs'];
+
+        echo '<div class="img-block">';
+        echo '<a href="cards.php?myid=' . $foto_id . '" target="new window">';
+        echo '<img src="' . $foto . '" alt="" title="' . $naam . '" class="img-responsive" />';
+        echo '</a>';
+        echo '<p><strong>' . $naam . '</strong></p>';
+        echo '<p><strong>' . $prijs . '</strong></p>';
+        echo '</div>';
 
     }
 ?>
