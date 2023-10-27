@@ -45,20 +45,6 @@
 
     }
 ?>
-      <div class="img-block">
-      <a href="cards.php?myid=<?php echo $foto_id; ?>" target="new window">
-	<img src="<?php echo $foto; ?>" alt="" title="<?php echo $naam; ?>" class="img-responsive" />
-	</a>
-				
-				
-				<p><strong><?php echo $naam; ?></strong></p>
-        <p><strong><?php echo $prijs; ?></strong></p>
-				</div>
-
-        
-      
-
-<div id="carDisplayContainer" class="projects-container"></div>
 
 </body>
 </html>
