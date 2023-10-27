@@ -32,3 +32,8 @@ ul {
     background-color: blue;  
     color: white;  
   } 
+  
+.logo img {
+  width: 82px;
+  margin-top: 6px;
+}

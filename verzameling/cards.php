@@ -12,7 +12,7 @@
     <nav>   
         <div class="navbar">
           <ul>
-          <a class="logo" href="../home/index.html">Logo> <img src="../images/HotWheelsLogo.png"/></a>
+          <a class="logo" href="../home/index.html"><img src="../images/HotWheelsLogo.png"/></a>
             <li><a href="../about/index.html">About</a></li>
             <li><a href="../contact/index.html">Contact</a></li>
             <li><a class="active" href="../verzamelling/index.php">Verzameling</a></li>
@@ -30,15 +30,13 @@
 
     $id = $_GET["myid"];
 
-    $results = $connection->query('SELECT * FROM verzameling');
+    $results = $connection->query("SELECT * FROM verzameling WHERE id = $id");
 
-    $image_query = mysqli_query($result,"select img_id,img_name,img_path from image_table where $id = img_id");
-	  while($rows = mysqli_fetch_array($image_query))
-	  {
-		$naam = $row['naam'];
-		$foto = $row['foto'];
-    $info = $row['beschrijving'];
-    $prijs = $row['prijs'];
+    if ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+        $naam = $row['naam'];
+        $foto = $row['foto'];
+        $info = $row['beschrijving'];
+        $prijs = $row['prijs'];
     }
 ?>
 
@@ -59,15 +57,21 @@
 
   <div class="prijs">
     <h2>Prijs:</h2>
-  <p><?php echo $prijs; ?></p>
+  <p>$<?php echo $prijs; ?></p>
 
-    <form action="verzameling/bestel.php" method="post" onsubmit="">
+    <form action="./bestel.php" method="post">
       <input type="hidden" id="item" name="item" value=""/>
-      <input type="text" name="naam" id="naam">
-      <input type="text" name="addres" id="addres">
-      <input type="text" name="postcode" id="postcode">
-      <input type="button" value="bestel" class="bestell">
+      <input type="text" name="naam" id="naam" placeholder="Uw naam..."> <br>
+      <input type="text" name="addres" id="addres" placeholder="Uw addres..."> <br>
+      <input type="text" name="postcode" id="postcode" placeholder="Uw postcode...">
+      <input type="button" value="bestel" class="bestell" onclick="submitForm()">
     </form>
+
+    <script>
+  function submitForm() {
+    document.querySelector("form").submit();
+  }
+</script>
 
   </div>
 

@@ -22,6 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ret = $db->exec($sql);
 }
 
-header("Location: ../bestelt.html");
+header("Location: ./bestelt.html");
 exit;
 ?>

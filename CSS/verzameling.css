@@ -19,12 +19,12 @@ h2 {
 
 .img-block {
     width: 150px;
+    height: 220px;
     margin: 10px;
     background-color: #fff;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     text-align: center;
     cursor: pointer;
 }
@@ -37,4 +37,16 @@ h2 {
 p {
     font-size: 1.2rem;
     margin: 5px 0;
+}
+
+cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(15, 15, 15);
 }

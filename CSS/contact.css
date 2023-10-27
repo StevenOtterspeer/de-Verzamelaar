@@ -39,10 +39,11 @@ input[type=email], select {
     box-sizing: border-box;
   }
 
-* {
-    margin: 0px;
-    padding: 0px;
+  body {
     font-family: Arial, sans-serif;
+    background-color: #e6e5e5;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
