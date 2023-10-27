@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px;
+}
+
+.img-box {
+    flex: 1;
+    padding: 10px;
+}
+
+.img-block img {
+    max-width: 100%;
+    height: auto;
+}
+
+.info {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.prijs {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.bestell {
+    background-color: #e8991a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bestell:hover {
+    background-color: #c48116;
+}

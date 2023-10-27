@@ -24,7 +24,7 @@
       <h2>Hotwheel Collection</h2>
 
       <?php
-    $connection = new SQLite3('db.db');
+    $connection = new SQLite3('../db/db.db');
     if($connection){
         echo "Connected\n";
     }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/bestelt.css">
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+          <ul>
+            <a href="../images/hotwheelsLogo.png" class="logo">Logo</a>
+            <li><a href="../about/index.html">About</a></li>
+            <li><a href="../contact/index.html">Contact</a></li>
+            <li><a href="../verzameling/index.php">Verzameling</a></li>
+            <li><a class="active" href="../home/index.html">Home</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="confirmation">Uw bestelling is gelukt en geplaatst!</div>
+    <div id="timer">De levering zal over <span id="countdown"></span> dagen aankomen.</div>
+
+    <script>        
+        const endDate = new Date();
+        endDate.setDate(endDate.getDate() + 15);
+
+        function updateCountdown() {
+            const now = new Date();
+            const timeRemaining = endDate - now;
+
+            if (timeRemaining <= 0) {
+                document.getElementById("countdown").textContent = "binnenkort!";
+            } else {
+                const daysRemaining = Math.ceil(timeRemaining / (1000 * 60 * 60 * 24));
+                document.getElementById("countdown").textContent = `${daysRemaining} dagen`;
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000); 
+    </script>
+
+</body>
+</html>

@@ -22,7 +22,7 @@
       </nav>
 
       <?php
-    $connection = new SQLite3('db.db');
+    $connection = new SQLite3('../db/db.db');
 
     if($connection){
         echo "Connected\n";
@@ -47,17 +47,30 @@
 	
 	  <div class="img-block">
 
-	  <img src="<?php echo $foto; ?>" alt="" title="<?php echo $naam; ?>"/>
+	    <img src="<?php echo $foto; ?>" alt="" title="<?php echo $naam; ?>"/>
 
 	  </div>
   </div>
+
   <div class="info">
-    <?php echo $info; ?>
+    <h2><?php echo $naam; ?></h2>
+    <p><?php echo $info; ?></p>
   </div>
+
   <div class="prijs">
-    <?php echo $prijs; ?>
-    <input type="button" value="add" class="add_btn">
+    <h2>Prijs:</h2>
+  <p><?php echo $prijs; ?></p>
+
+    <form action="verzameling/bestel.php" method="post" onsubmit="">
+      <input type="hidden" id="item" name="item" value=""/>
+      <input type="text" name="naam" id="naam">
+      <input type="text" name="addres" id="addres">
+      <input type="text" name="postcode" id="postcode">
+      <input type="button" value="bestel" class="bestell">
+    </form>
+
   </div>
+
 </div>
 
 </body>
