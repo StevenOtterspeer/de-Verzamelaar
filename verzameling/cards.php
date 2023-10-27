@@ -12,7 +12,7 @@
     <nav>   
         <div class="navbar">
           <ul>
-          <a src="../images/HotWheelsLogo.png" href="../home/index.html" class="logo">Logo</a>
+          <a class="logo" href="../home/index.html">Logo> <img src="../images/HotWheelsLogo.png"/></a>
             <li><a href="../about/index.html">About</a></li>
             <li><a href="../contact/index.html">Contact</a></li>
             <li><a class="active" href="../verzamelling/index.php">Verzameling</a></li>
@@ -35,10 +35,10 @@
     $image_query = mysqli_query($result,"select img_id,img_name,img_path from image_table where $id = img_id");
 	  while($rows = mysqli_fetch_array($image_query))
 	  {
-		$naam = $rows['naam'];
-		$foto = $rows['foto'];
-    $info = $rows['beschrijving'];
-    $prijs = $rows['prijs'];
+		$naam = $row['naam'];
+		$foto = $row['foto'];
+    $info = $row['beschrijving'];
+    $prijs = $row['prijs'];
     }
 ?>
 

@@ -12,7 +12,7 @@
     <nav>   
         <div class="navbar">
           <ul>
-            <a src="../images/HotWheelsLogo.png" href="../home/index.html" class="logo">Logo</a>
+            <a class="logo" href="../home/index.html">Logo> <img src="../images/HotWheelsLogo.png"/></a>
             <li><a href="../about/index.html">About</a></li>
             <li><a href="../contact/index.php">Contact</a></li>
             <li><a class="active" href="../verzamelling/index.php">Verzameling</a></li>
@@ -30,10 +30,10 @@
     }
     $results = $connection->query('SELECT * FROM verzameling');
     while($row=$results->fetchArray(SQLITE3_ASSOC)){
-        $foto_id = $rows['id'];
-        $foto = $rows['foto']; 
-        $naam = $rows['naam'];
-        $prijs = $rows['prijs'];
+        $foto_id = $row['id'];
+        $foto = $row['foto']; 
+        $naam = $row['naam'];
+        $prijs = $row['prijs'];
 
         echo '<div class="img-block">';
         echo '<a href="cards.php?myid=' . $foto_id . '" target="new window">';

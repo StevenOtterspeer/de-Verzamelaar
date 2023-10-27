@@ -13,11 +13,7 @@ header {
     padding: 20px;
     width: 60%; 
     margin: 0 auto; 
-    margin-top: 20px; 
-}
-
-h1 {
-    font-size: 2rem;
+    margin-top: 20px;
 }
 
 .container {
@@ -31,4 +27,19 @@ h1 {
 p {
     font-size: 1.2rem;
     line-height: 1.4;
+}
+body h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+body h2 {
+    font-size: 20px;
+    color: #0077B6;
+}
+
+body p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
 }
