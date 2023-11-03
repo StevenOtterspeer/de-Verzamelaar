@@ -22,6 +22,11 @@
       </nav>
 
       <h2>Hotwheel Collection</h2>
+        <form action="verzameling/login.php" method="post">
+         <input type="text" name="username" placeholder="Username" />
+         <input type="password" name="password" placeholder="Wachtwoord" />
+         <input type="submit" value="Login">
+        </form>
       <cards>
 
       <?php
